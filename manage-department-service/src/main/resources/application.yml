@@ -1,5 +1,15 @@
+server:
+  port: 8081
 spring:
   application:
-    name : manage-department-service
-server:
-  port : 8081
+    name: manage-department-service
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/departmentdb
+    username: root
+    password: 12345678
+  jpa:
+     hibernate.ddl-auto: update
+     generate-ddl: true
+     show-sql: true
+
