@@ -54,7 +54,9 @@ public class DepartmentController {
 	public ResponseEntity <List<DepartmentModel>> viewAll() {
 		return ResponseEntity.ok(departmentService.viewAll());
 		
+		
 	}
+	
 
 	
 }

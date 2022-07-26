@@ -1,6 +1,5 @@
 package com.capgemini.manageguestservice.mapper;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import com.capgemini.manageguestservice.entity.Address;
