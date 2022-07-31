@@ -1,6 +1,5 @@
 package com.capgemini.manageuserservice.entity;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -48,8 +47,5 @@ public class User {
 	}
 	public void setRole(String role) {
 		this.role = role;
-	}
-	
-	
- 
+	} 
 }

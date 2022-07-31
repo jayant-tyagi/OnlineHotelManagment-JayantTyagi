@@ -5,33 +5,55 @@ import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
 @Component
 @ConfigurationProperties("paytm.payment.sandbox")
-
 public class PaytmDetails {
 	
 	private String merchantId;
+	
+	private String merchantKey;
+	
+	private String channelId;
+	
+	private String website;
+	
+	private String industryTypeId;
+	
+	private String paytmUrl;
+	
+	private Map<String, String> details;
+	
+	public PaytmDetails() {}
+	
 
-    private String merchantKey;
+	public PaytmDetails(String merchantId, String merchantKey, String channelId, String website,
+			String industryTypeId, String paytmUrl, Map<String, String> details) {
+		super();
+		this.merchantId = merchantId;
+		this.merchantKey = merchantKey;
+		this.channelId = channelId;
+		this.website = website;
+		this.industryTypeId = industryTypeId;
+		this.paytmUrl = paytmUrl;
+		this.details = details;
+	}
 
-    private String channelId;
+	public String getMerchantId() {
+		return merchantId;
+	}
 
-    private String website;
+	public void setMerchantId(String merchantId) {
+		this.merchantId = merchantId;
+	}
 
-    private String industryTypeId;
+	public String getMerchantKey() {
+		return merchantKey;
+	}
 
-    private String paytmUrl;
-
-    private Map<String, String> details;
+	public void setMerchantKey(String merchantKey) {
+		this.merchantKey = merchantKey;
+	}
 
 	public String getChannelId() {
 		return channelId;
@@ -39,6 +61,22 @@ public class PaytmDetails {
 
 	public void setChannelId(String channelId) {
 		this.channelId = channelId;
+	}
+
+	public String getWebsite() {
+		return website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+
+	public String getIndustryTypeId() {
+		return industryTypeId;
+	}
+
+	public void setIndustryTypeId(String industryTypeId) {
+		this.industryTypeId = industryTypeId;
 	}
 
 	public String getPaytmUrl() {
@@ -57,36 +95,12 @@ public class PaytmDetails {
 		this.details = details;
 	}
 
-	public String getMerchantKey() {
-		return merchantKey;
-	}
 
-	public void setMerchantKey(String merchantKey) {
-		this.merchantKey = merchantKey;
-	}
-
-	public String getMerchantId() {
-		return merchantId;
-	}
-
-	public void setMerchantId(String merchantId) {
-		this.merchantId = merchantId;
-	}
-
-	public String getIndustryTypeId() {
-		return industryTypeId;
-	}
-
-	public void setIndustryTypeId(String industryTypeId) {
-		this.industryTypeId = industryTypeId;
-	}
-
-	public String getWebsite() {
-		return website;
-	}
-
-	public void setWebsite(String website) {
-		this.website = website;
-	}
+	@Override
+	public String toString() {
+		return "PaytmDetailPojo [merchantId=" + merchantId + ", merchantKey=" + merchantKey + ", channelId=" + channelId
+				+ ", website=" + website + ", industryTypeId=" + industryTypeId + ", paytmUrl=" + paytmUrl
+				+ ", details=" + details + "]";
+	}	
 
 }

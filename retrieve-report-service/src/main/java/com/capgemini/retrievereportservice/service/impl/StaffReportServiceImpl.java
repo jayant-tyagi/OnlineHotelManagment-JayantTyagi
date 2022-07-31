@@ -34,7 +34,7 @@ public class StaffReportServiceImpl implements StaffReportService {
 		for(StaffReportModel reportModel:sample) {
 			filecontent.append(reportModel.getCode()).append(",").append(reportModel.getFirstname()).append(",").append(reportModel.getLastname()).append(",").append(reportModel.getSalary()).append(",").append(reportModel.getJoinedon()).append("\n");
 		}
-		String filename="/Users/tyagi/Downloads/HotelManagementSystem\\staffreport.csv";
+		String filename="D:\\Online Hotel Management System\\staffreport.csv";
 		
 		try {
 			

@@ -9,5 +9,6 @@ public interface UserService {
 	public UserModel addUserService(UserModel user);
 	public UserModel updateUserService(UserModel user);
 	public String deleteUserService(String username);
+	public UserModel checkUser(String username);
 
 }

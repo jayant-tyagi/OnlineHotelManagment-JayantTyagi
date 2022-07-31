@@ -1,5 +1,6 @@
 package com.capgemini.manageinventoryservice.controller;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import com.capgemini.manageinventoryservice.model.InventoryModel;
 import com.capgemini.manageinventoryservice.service.InventoryService;
 
 @RestController
-@RequestMapping("ManageInventory")
+@RequestMapping("manager/ManageInventory")
 public class InventoryController {
 	
 	@Autowired

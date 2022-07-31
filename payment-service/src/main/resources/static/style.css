@@ -13,7 +13,7 @@
     border-radius: 1.5rem;
     padding: 2%;
     width: 60%;
-    background: #f8f9fa;
+    background: orange;
     font-weight: bold;
     color: #383d41;
     margin-top: 30%;
@@ -22,8 +22,12 @@
 }
 .register-right{
     background: #f8f9fa;
-    border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;
+    border-top-left-radius:  5%;
+    border-bottom-left-radius:  5%;
+     border-top-right-radius:  5%;
+    border-bottom-right-radius: 5%;
+        margin-left: 12.5%;
+    
 }
 .register-left img{
     margin-top: 15%;
@@ -52,7 +56,7 @@
 .btnRegister {
     border: none;
     border-radius: 1.5rem;
-    background: #0062cc;
+    background: #8000ff;
     color: #fff;
     font-weight: 600;
     width: 55%;

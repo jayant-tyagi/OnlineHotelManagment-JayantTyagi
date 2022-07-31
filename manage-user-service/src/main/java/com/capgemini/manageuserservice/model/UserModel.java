@@ -11,6 +11,21 @@ public class UserModel {
 	
 	
 	
+	public UserModel() {
+		
+	}
+	public UserModel(String username, String name, String password, String role) {
+		
+		this.username = username;
+		this.name = name;
+		this.password = password;
+		this.role = role;
+	}
+	public UserModel(String username, String password) {
+		
+		this.username = username;
+		this.password = password;
+	}
 	public String getUsername() {
 		return username;
 	}

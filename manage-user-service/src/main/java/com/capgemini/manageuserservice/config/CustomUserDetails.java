@@ -1,6 +1,5 @@
 package com.capgemini.manageuserservice.config;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -15,7 +14,6 @@ public class CustomUserDetails implements UserDetails{
 	
 	private User user;
 	
-	
 	public CustomUserDetails(User user) {
 		super();
 		this.user = user;
@@ -27,7 +25,6 @@ public class CustomUserDetails implements UserDetails{
 		SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority(user.getRole());
 		
 		return Arrays.asList(simpleGrantedAuthority);
-		
 	}
 
 	@Override
