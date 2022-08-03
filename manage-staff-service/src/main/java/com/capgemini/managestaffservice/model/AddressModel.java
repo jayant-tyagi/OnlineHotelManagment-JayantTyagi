@@ -1,12 +1,33 @@
 package com.capgemini.managestaffservice.model;
 
+import javax.validation.constraints.*;
+
 public class AddressModel {
+	@NotNull
 	private int Id;
+	
+	@NotBlank(message = "streetname is mandatory")
+	@Size(min = 5 , max = 120 , message = "street cannot be less than 5 and more than 120 alphabets")
 	private String streetName;
+	
+	@Size(min = 4 , max = 7, message = "houseNo cannot be less than 4 and more than 7 alphabets")
 	private String houseNo;
+	
+	@NotBlank(message = "city is mandatory")
+	@Size(min = 3 , max = 20, message = "city cannot be less than 3 and more than 20 alphabets")
 	private String city;
+	
+	@NotBlank(message = "state is mandatory")
+	@Size(min = 2 , max = 20,  message = "state cannot be less than 2 and more than 20 alphabets")
 	private String state;
+	
+	@NotBlank(message = "country is mandatory")
+	@Size(min = 3 , max =20 , message = "country cannot be less than 3 and more than 20 alphabets")
 	private String country;
+	
+	@NotNull(message = "pincode is mandatory")
+	@Min(value = 111111)
+	@Max(value = 999999)
 	private long pincode;
 	
 	public int getId() {

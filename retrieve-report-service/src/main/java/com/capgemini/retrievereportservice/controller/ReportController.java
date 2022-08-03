@@ -2,6 +2,8 @@ package com.capgemini.retrievereportservice.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.MediaType;
@@ -29,6 +31,8 @@ import com.capgemini.retrievereportservice.service.StaffReportService;
 @RequestMapping("/RetrieveReport")
 public class ReportController {
 
+	Logger logger = LoggerFactory.getLogger(ReportController.class);
+	
 	@Autowired
 	private StaffReportService staffReportService;
 	
@@ -40,17 +44,19 @@ public class ReportController {
 
 	@GetMapping(value = "/HelloTest", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> helloTest() {
+		logger.info("Hello Test has been accessed");
 			return ResponseEntity.ok("Hello World-5");
 	}
 	
 	@GetMapping(value = "/dbtest", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<StaffReportModel>> dbTest() {
+			logger.info("DB Test has been accessed");
 			return ResponseEntity.ok(staffReportService.getStaffPaymentService());
 	}
 	
 	@GetMapping(value="/generatestaffreport")
 	public ResponseEntity<Object> generateStaffReport(){
-		
+		logger.info("Generate Staff Report has been accessed");
 		ResponseEntity<StaffList> staffList = restTemplate.getForEntity("http://localhost:8083/ManageStaff/reportdata", StaffList.class);
 		File file=staffReportService.generateStaffRreport(staffList.getBody());
 		try {
@@ -64,6 +70,7 @@ public class ReportController {
 		
 		return ResponseEntity.ok().headers(headers).contentLength(file.length()).contentType(MediaType.parseMediaType("application/txt")).body(resource);
 		}catch(Exception e) {
+			logger.info("Error in Generate Staff Report has been occured");
 			return new ResponseEntity<>("error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		
@@ -71,6 +78,7 @@ public class ReportController {
 	
 	@GetMapping(value="/generateincomereport")
 	public ResponseEntity<Object> generateIncomeReport(){
+		logger.info("Generate Income Report has been accessed");
 		ResponseEntity<IncomeList> incomeList = restTemplate.getForEntity("http://localhost:8086/IssueBill/reportdata", IncomeList.class);
 		File file = incomeReportService.generateIncomeReport(incomeList.getBody());
 		try {

@@ -1,14 +1,19 @@
 package com.capgemini.manageuserservice.model;
 
-
+import javax.validation.constraints.*;
 
 public class UserModel {
 	
+	@NotBlank
+	@Pattern(regexp = "^(\\s*|\\d{10})$", message = "criteria doesn't match")
 	private String username;
+	@NotBlank
 	private String name;
+	@NotBlank
+	@Size(min = 6,max = 12 )
 	private String password;
+	@NotBlank
 	private String role;
-	
 	
 	
 	public UserModel() {

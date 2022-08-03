@@ -23,6 +23,7 @@ public class StaffReportServiceImpl implements StaffReportService {
 	@Autowired
 	private StaffReportRepository staffReportRepository;
 
+	@SuppressWarnings("unused")
 	public File generateStaffRreport(StaffList staffList) {
 		staffReportRepository.deleteAll();
 		List<StaffReportModel> sample =staffList.getStaffReportList();

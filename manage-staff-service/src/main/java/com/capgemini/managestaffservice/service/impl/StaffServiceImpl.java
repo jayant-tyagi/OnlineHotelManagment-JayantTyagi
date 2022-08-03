@@ -2,6 +2,12 @@ package com.capgemini.managestaffservice.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Validation;
+import javax.validation.Validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -9,6 +15,7 @@ import org.springframework.stereotype.Component;
 import com.capgemini.managestaffservice.entity.Staff;
 import com.capgemini.managestaffservice.mapper.AddressMapper;
 import com.capgemini.managestaffservice.mapper.StaffMapper;
+import com.capgemini.managestaffservice.model.AddressModel;
 import com.capgemini.managestaffservice.model.StaffList;
 import com.capgemini.managestaffservice.model.StaffModel;
 import com.capgemini.managestaffservice.model.StaffReportModel;
@@ -25,11 +32,15 @@ public class StaffServiceImpl implements StaffService {
 	private StaffRepository staffRepository;
 	
 	public StaffModel addStaffService(StaffModel staff) {
+		validateEntity(staff.getAddress());
+		validateEntity(staff);
 		Staff staffEntity= staffRepository.save(staffMapper.mapDtoToEntity(staff));
 		return staffMapper.mapEntityToDto(staffEntity);
 	}
 	
 	public StaffModel updateStaffService(StaffModel staff) {
+		validateEntity(staff.getAddress());
+		validateEntity(staff);
 		Staff staffEntity =staffRepository.findById(staff.getCode());
 		staffEntity.setFirstname(staff.getFirstname());
 		staffEntity.setLastname(staff.getLastname());
@@ -80,5 +91,37 @@ public class StaffServiceImpl implements StaffService {
 		modelList.setStaffReportList(reportModelList);
 		return modelList;
 	}
+	
+	private void validateEntity(StaffModel staff) {
+		List<String> errorMessage = new ArrayList<>();
+		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+
+		Set<ConstraintViolation<StaffModel>> constraintViolations = validator.validate(staff);
+
+		for (ConstraintViolation<StaffModel> constraintViolation : constraintViolations) {
+			errorMessage.add(constraintViolation.getMessage());
+		}
+
+		if (errorMessage.size() > 0) {
+			throw new ConstraintViolationException(constraintViolations);
+		}
+
+	}
+	private void validateEntity(AddressModel address) {
+		List<String> errorMessage = new ArrayList<>();
+		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+
+		Set<ConstraintViolation<AddressModel>> constraintViolations = validator.validate(address);
+
+		for (ConstraintViolation<AddressModel> constraintViolation : constraintViolations) {
+			errorMessage.add(constraintViolation.getMessage());
+		}
+
+		if (errorMessage.size() > 0) {
+			throw new ConstraintViolationException(constraintViolations);
+		}
+
+	}
+
 
 }

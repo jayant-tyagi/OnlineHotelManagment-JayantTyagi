@@ -1,6 +1,5 @@
 package com.capgemini.manageroomservice.mapper;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import com.capgemini.manageroomservice.entity.Room;

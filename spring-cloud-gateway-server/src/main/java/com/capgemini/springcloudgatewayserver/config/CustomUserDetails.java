@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.capgemini.springcloudgatewayserver.model.UserModel;
 
 //@Component
+@SuppressWarnings("serial")
 public class CustomUserDetails implements UserDetails{
 	
 	private UserModel userModel;

@@ -1,5 +1,7 @@
 package com.capgemini.makereservationservice.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +18,9 @@ import com.capgemini.makereservationservice.service.EmailService;
 @RequestMapping("/IssueBill")
 public class BillController {
 	
+	Logger logger = LoggerFactory.getLogger(ReservationController.class);
+
+	
 	@Autowired
 	private BillService billService;
 	
@@ -24,6 +29,7 @@ public class BillController {
 	
 	@GetMapping(value = "/{roomno}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<BillModel> issueBill(@PathVariable int roomno){
+		logger.info("Issue Bill has been accessed");
 		BillModel billmodel= billService.issueBill(roomno);
 		
 		StringBuilder maildata = new StringBuilder("Hello Guest, \n thank you for choosing us as your Staying destination. your bill has been generated and details are as follows: \n");
@@ -46,6 +52,7 @@ public class BillController {
 	
 	@GetMapping(value="/reportdata", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<IncomeList> incomereport(){
+		logger.info("Report Data has been accessed");
 		return ResponseEntity.ok(billService.generateReport());
 	}
 	

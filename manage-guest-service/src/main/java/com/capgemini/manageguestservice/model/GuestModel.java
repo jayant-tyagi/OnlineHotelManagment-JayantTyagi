@@ -1,14 +1,33 @@
 package com.capgemini.manageguestservice.model;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class GuestModel {
-	private int id;
+private int id;
+	
+	@NotBlank(message = "firstName is mandatory")
 	private String firstName;
+	
+	@NotBlank(message = "LastName is mandatory")
 	private String lastName;
 	
-	private long  phoneNumber;
+	@NotBlank(message = "phoneno is mandatory")
+	@Pattern(regexp = "^(\\s*|\\d{10})$" , message = "criteria doesn't match")
+	private String  phoneNumber;
+	
+	@Size(min = 3 , max = 20 , message ="company cannot be less than 2 and more than 20 words")
 	private String company;
+	
+	@Email
+	@Pattern(regexp = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$",message = "criteria doesnt match")
 	private String email;
+	
+	@NotBlank
 	private String gender;
+
 	private AddressModel address;
 	
 	public GuestModel() {
@@ -16,7 +35,7 @@ public class GuestModel {
 	}
 
 
-	public GuestModel(int id, String firstName, String lastName, AddressModel address, long phoneNumber, String company,
+	public GuestModel(int id, String firstName, String lastName, AddressModel address, String phoneNumber, String company,
 			String email, String gender) {
 		super();
 		this.id = id;
@@ -70,12 +89,12 @@ public class GuestModel {
 	}
 
 
-	public long getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
 
-	public void setPhoneNumber(long phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

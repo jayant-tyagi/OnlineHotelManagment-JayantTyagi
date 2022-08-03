@@ -22,7 +22,7 @@ public class Guest {
   @Column
   private String lastName;
   @Column
-  private long phoneNumber;
+  private String phoneNumber;
   @Column
   private String company;
   @Column
@@ -58,11 +58,11 @@ public void setLastName(String lastName) {
 	this.lastName = lastName;
 }
 
-public long getPhoneNumber() {
+public String getPhoneNumber() {
 	return phoneNumber;
 }
 
-public void setPhoneNumber(long phoneNumber) {
+public void setPhoneNumber(String phoneNumber) {
 	this.phoneNumber = phoneNumber;
 }
 

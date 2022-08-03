@@ -17,6 +17,7 @@ public class RoomModel {
 	private int extension_rate;
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date bookedtill;
+
 	
 	public RoomModel() {
 		

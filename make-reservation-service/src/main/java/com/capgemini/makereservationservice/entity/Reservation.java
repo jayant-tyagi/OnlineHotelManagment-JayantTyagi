@@ -17,7 +17,7 @@ public class Reservation {
 	private int noOfNight;
 	private int roomno;
 	private String guestEmail;
-	private long guestPhoneNo;
+	private String guestPhoneNo;
 	
 	public int getCode() {
 		return code;
@@ -73,10 +73,10 @@ public class Reservation {
 	public void setGuestEmail(String guestEmail) {
 		this.guestEmail = guestEmail;
 	}
-	public long getGuestPhoneNo() {
+	public String getGuestPhoneNo() {
 		return guestPhoneNo;
 	}
-	public void setGuestPhoneNo(long guestPhoneNo) {
+	public void setGuestPhoneNo(String guestPhoneNo) {
 		this.guestPhoneNo = guestPhoneNo;
 	}
 	

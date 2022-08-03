@@ -2,6 +2,12 @@ package com.capgemini.managedepartmentservice.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Validation;
+import javax.validation.Validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -22,11 +28,13 @@ public class DepartmentServiceImpl implements DepartmentService{
 	private DepartmentRepository departmentRepository;
 	
 	public DepartmentModel addDepartmentService(DepartmentModel department) {
+		validateEntity(department);
 		Department departmentEntity= departmentRepository.save(departmentMapper.mapDtoToEntity(department));
 		return departmentMapper.mapEntityToDto(departmentEntity);
 	}
 	
 	public DepartmentModel updateDepartmentService(DepartmentModel department) {
+		validateEntity(department);
 		Department departmentEntity =departmentRepository.findById(department.getId());
 		departmentEntity.setName(department.getName());
 		departmentEntity.setHodName(department.getHodName());
@@ -58,6 +66,20 @@ public class DepartmentServiceImpl implements DepartmentService{
 		}
 		return modelList;
 	}
+	
+	private void validateEntity(DepartmentModel department) {
+		List<String> errorMessage = new ArrayList<>();
+		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
+		Set<ConstraintViolation<DepartmentModel>> constraintViolations = validator.validate(department);
+
+		for (ConstraintViolation<DepartmentModel> constraintViolation : constraintViolations) {
+			errorMessage.add(constraintViolation.getMessage());
+		}
+
+		if (errorMessage.size() > 0) {
+			throw new ConstraintViolationException(constraintViolations);
+		}
+	}
 
 }

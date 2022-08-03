@@ -17,6 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import com.capgemini.manageuserservice.filter.JwtRequestFilter;
 import com.capgemini.manageuserservice.service.impl.UserDetailsServiceImpl;
 
+@SuppressWarnings("deprecation")
 @Configuration
 @EnableWebSecurity
 public class MyConfig extends WebSecurityConfigurerAdapter{

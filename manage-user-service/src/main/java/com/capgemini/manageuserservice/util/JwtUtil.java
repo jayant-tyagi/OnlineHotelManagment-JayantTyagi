@@ -11,8 +11,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import io.jsonwebtoken.Claims;
-
 @Service
 public class JwtUtil {
 	
