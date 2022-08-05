@@ -16,41 +16,37 @@ public class AddRoomModel {
 	private int capacity;
 	@NotBlank
 	private String status;
-	@NotNull
-	@Min(value = 500)
-	@Max(value = 100000)
-	private int room_rate;
-	
+
 	public int getRoomno() {
 		return roomno;
 	}
+
 	public void setRoomno(int roomno) {
 		this.roomno = roomno;
 	}
+
 	public String getType() {
 		return type;
 	}
+
 	public void setType(String type) {
 		this.type = type;
 	}
+
 	public int getCapacity() {
 		return capacity;
 	}
+
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
+
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public int getRoom_rate() {
-		return room_rate;
-	}
-	public void setRoom_rate(int room_rate) {
-		this.room_rate = room_rate;
-	}
-	
-	
+
 }

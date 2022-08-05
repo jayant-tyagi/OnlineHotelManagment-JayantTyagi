@@ -17,29 +17,22 @@ import springfox.documentation.spring.web.plugins.Docket;
 @EnableWebMvc
 public class SwaggerConfig implements WebMvcConfigurer {
 
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("com.capgemini.manageguestservice.controller"))
-                .paths(PathSelectors.regex("/.*"))
-                .build()
-                .apiInfo(apidetails());
-    }
-    
-    private ApiInfo apidetails() {
-    	return new ApiInfo(
-    			"Manage Guest",
-    			"It manages all the guest realated details in the Hotel.",
-    			"1.0",
-    			"Free to use",
-    			new springfox.documentation.service.Contact("Jayant Tyagi","http://localhost:8088","tyagijayant03@gmail.com"),
-    			"API Licence",
-    			"http://localhost:8088",
-    			Collections.emptyList());
-    }
+	@Bean
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select()
+				.apis(RequestHandlerSelectors.basePackage("com.capgemini.manageguestservice.controller"))
+				.paths(PathSelectors.regex("/.*")).build().apiInfo(apidetails());
+	}
 
-    
-    }
+	private ApiInfo apidetails() {
+		return new ApiInfo("Manage Guest", "It manages all the guest realated details in the Hotel.", "1.0",
+				"Free to use",
+				new springfox.documentation.service.Contact("Jayant Tyagi",
+						"http://localhost:8088/ManageGuest/HelloTest", "tyagijayant03@gmail.com"),
+				"API Licence", "http://localhost:8088", Collections.emptyList());
+	}
+
+}
 
 // http://localhost:8088/v2/api-docs
 // http://localhost:8088/swagger-ui/index.html#/

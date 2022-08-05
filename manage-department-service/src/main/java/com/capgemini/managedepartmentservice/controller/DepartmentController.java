@@ -21,58 +21,57 @@ import com.capgemini.managedepartmentservice.service.DepartmentService;
 import com.capgemini.managedepartmentservice.service.impl.MessageListener;
 
 @RestController
-@RequestMapping("owner/ManageDepartment")
+@RequestMapping("/ManageDepartment")
 public class DepartmentController {
-	
+
 	Logger logger = LoggerFactory.getLogger(DepartmentController.class);
-	
+
 	@Autowired
 	private DepartmentService departmentService;
 
-
 	@GetMapping(value = "/HelloTest", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> helloTest() {
-			logger.info("Hello Test has been accessed");
-			return ResponseEntity.ok("Hello World-1");
+		logger.info("Hello Test has been accessed");
+		return ResponseEntity.ok("Hello World-1");
 	}
-	
+
 	@PostMapping(value = "/adddepartment", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<DepartmentModel> addDepartment(@RequestBody DepartmentModel department) {
 		logger.info("Add Department has been accessed");
 		return ResponseEntity.ok(departmentService.addDepartmentService(department));
 	}
-	
-	@PutMapping(value="/updatedepartment", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<DepartmentModel> updateDepartment(@RequestBody DepartmentModel department){
+
+	@PutMapping(value = "/updatedepartment", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<DepartmentModel> updateDepartment(@RequestBody DepartmentModel department) {
 		logger.info("Update Department has been accessed");
 		return ResponseEntity.ok(departmentService.updateDepartmentService(department));
 	}
-	
+
 	@DeleteMapping(value = "/deletedepartment/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> deleteDepartment(@PathVariable int id) {
 		logger.info("Delete Department has been accessed");
 		return ResponseEntity.ok(departmentService.deleteDepartmentService(id));
 	}
-	 
-		@GetMapping(value = "/viewdepartment", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-		public ResponseEntity<DepartmentModel> findDepartmentByName(@RequestBody DepartmentModel department) {
-			logger.info("View Department has been accessed");
-			return ResponseEntity.ok(departmentService.viewDepartmentByName(department.getName()));
-			
-		}
-		@GetMapping(value = "/viewall", produces = MediaType.APPLICATION_JSON_VALUE)
-		public ResponseEntity <List<DepartmentModel>> viewAll() {
-			logger.info("View All Department has been accessed");
-			return ResponseEntity.ok(departmentService.viewAll());
-			
-		}
-		
-		@GetMapping(value = "/notification", produces = MediaType.APPLICATION_JSON_VALUE)
-		public ResponseEntity <List<String>> getnNotification() {
-			logger.info("Notifications has been accessed");
-			return ResponseEntity.ok (MessageListener.getMessageList());
 
-  }
-	 
+	@GetMapping(value = "/viewdepartment", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<DepartmentModel> findDepartmentByName(@RequestBody DepartmentModel department) {
+		logger.info("View Department has been accessed");
+		return ResponseEntity.ok(departmentService.viewDepartmentByName(department.getName()));
+
+	}
+
+	@GetMapping(value = "/viewall", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<DepartmentModel>> viewAll() {
+		logger.info("View All Department has been accessed");
+		return ResponseEntity.ok(departmentService.viewAll());
+
+	}
+
+	@GetMapping(value = "/notification", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<String>> getnNotification() {
+		logger.info("Notifications has been accessed");
+		return ResponseEntity.ok(MessageListener.getMessageList());
+
+	}
 
 }

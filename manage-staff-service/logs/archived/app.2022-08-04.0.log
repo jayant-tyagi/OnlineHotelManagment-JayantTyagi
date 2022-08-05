@@ -1,0 +1,4 @@
+2022-08-04 23:18:31,645 INFO com.capgemini.managestaffservice.ManageStaffServiceApplication [main] Starting ManageStaffServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 6081 (/Users/tyagi/Downloads/HotelManagementSystem/manage-staff-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-staff-service)
+2022-08-04 23:18:31,648 INFO com.capgemini.managestaffservice.ManageStaffServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-04 23:18:37,486 INFO com.capgemini.managestaffservice.ManageStaffServiceApplication [main] Started ManageStaffServiceApplication in 6.275 seconds (JVM running for 6.932)
+2022-08-04 23:45:47,316 INFO com.capgemini.managestaffservice.controller.StaffController [http-nio-8083-exec-2] Hello Test has been accessed

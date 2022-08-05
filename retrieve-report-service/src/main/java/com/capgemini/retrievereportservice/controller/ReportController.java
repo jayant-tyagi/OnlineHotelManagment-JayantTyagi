@@ -25,73 +25,75 @@ import com.capgemini.retrievereportservice.model.StaffReportModel;
 import com.capgemini.retrievereportservice.service.IncomeReportService;
 import com.capgemini.retrievereportservice.service.StaffReportService;
 
-
-
 @RestController
 @RequestMapping("/RetrieveReport")
 public class ReportController {
 
 	Logger logger = LoggerFactory.getLogger(ReportController.class);
-	
+
 	@Autowired
 	private StaffReportService staffReportService;
-	
+
 	@Autowired
 	private IncomeReportService incomeReportService;
-	
+
 	@Autowired
 	private RestTemplate restTemplate;
 
 	@GetMapping(value = "/HelloTest", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> helloTest() {
 		logger.info("Hello Test has been accessed");
-			return ResponseEntity.ok("Hello World-5");
+		return ResponseEntity.ok("Hello World-5");
 	}
-	
+
 	@GetMapping(value = "/dbtest", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<StaffReportModel>> dbTest() {
-			logger.info("DB Test has been accessed");
-			return ResponseEntity.ok(staffReportService.getStaffPaymentService());
+		logger.info("DB Test has been accessed");
+		return ResponseEntity.ok(staffReportService.getStaffPaymentService());
 	}
-	
-	@GetMapping(value="/generatestaffreport")
-	public ResponseEntity<Object> generateStaffReport(){
+
+	@GetMapping(value = "/generatestaffreport")
+	public ResponseEntity<Object> generateStaffReport() {
 		logger.info("Generate Staff Report has been accessed");
-		ResponseEntity<StaffList> staffList = restTemplate.getForEntity("http://localhost:8083/ManageStaff/reportdata", StaffList.class);
-		File file=staffReportService.generateStaffRreport(staffList.getBody());
+		ResponseEntity<StaffList> staffList = restTemplate.getForEntity("http://localhost:8083/ManageStaff/reportdata",
+				StaffList.class);
+		File file = staffReportService.generateStaffRreport(staffList.getBody());
 		try {
-		InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
-				
-		HttpHeaders headers= new HttpHeaders();
-		headers.add("Content-Disposition",String.format("attachment; filename=\"%s\"",file.getName()));
-		headers.add("Cache-Control","no-cache, no-store, must-revalidate");
-		headers.add("Pragma","no-cache");
-		headers.add("Expires","0");
-		
-		return ResponseEntity.ok().headers(headers).contentLength(file.length()).contentType(MediaType.parseMediaType("application/txt")).body(resource);
-		}catch(Exception e) {
+			InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getName()));
+			headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+			headers.add("Pragma", "no-cache");
+			headers.add("Expires", "0");
+
+			return ResponseEntity.ok().headers(headers).contentLength(file.length())
+					.contentType(MediaType.parseMediaType("application/txt")).body(resource);
+		} catch (Exception e) {
 			logger.info("Error in Generate Staff Report has been occured");
 			return new ResponseEntity<>("error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		
+
 	}
-	
-	@GetMapping(value="/generateincomereport")
-	public ResponseEntity<Object> generateIncomeReport(){
+
+	@GetMapping(value = "/generateincomereport")
+	public ResponseEntity<Object> generateIncomeReport() {
 		logger.info("Generate Income Report has been accessed");
-		ResponseEntity<IncomeList> incomeList = restTemplate.getForEntity("http://localhost:8086/IssueBill/reportdata", IncomeList.class);
+		ResponseEntity<IncomeList> incomeList = restTemplate.getForEntity("http://localhost:8086/IssueBill/reportdata",
+				IncomeList.class);
 		File file = incomeReportService.generateIncomeReport(incomeList.getBody());
 		try {
 			InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
-			
+
 			HttpHeaders headers = new HttpHeaders();
-			headers.add("Content-Disposition",String.format("attachment; filename=\"%s\"",file.getName()));
-			headers.add("Cache-Control","no-cache, no-store, must-revalidate");
-			headers.add("Pragma","no-cache");
-			headers.add("Expires","0");
-			
-			return ResponseEntity.ok().headers(headers).contentLength(file.length()).contentType(MediaType.parseMediaType("application/txt")).body(resource);
-		}catch(Exception e) {
+			headers.add("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getName()));
+			headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+			headers.add("Pragma", "no-cache");
+			headers.add("Expires", "0");
+
+			return ResponseEntity.ok().headers(headers).contentLength(file.length())
+					.contentType(MediaType.parseMediaType("application/txt")).body(resource);
+		} catch (Exception e) {
 			return new ResponseEntity<>("error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}

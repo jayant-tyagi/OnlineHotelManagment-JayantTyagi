@@ -4,8 +4,6 @@ import java.util.Date;
 
 import javax.validation.constraints.*;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class StaffModel {
@@ -24,8 +22,6 @@ public class StaffModel {
 
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@NotNull
-	@PastOrPresent
-	@DateTimeFormat
 	private Date joinedon;
 
 	@NotNull
@@ -38,7 +34,7 @@ public class StaffModel {
 
 	@NotBlank
 	@Email
-	@Pattern(regexp = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$", message = "criteria doesnt match")
+	@Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", message = "criteria doesnt match")
 	private String email;
 	private AddressModel address;
 

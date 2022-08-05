@@ -2,7 +2,6 @@ package com.capgemini.manageuserservice.config;
 
 import java.util.Arrays;
 import java.util.Collection;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,6 +19,8 @@ public class CustomUserDetails implements UserDetails {
 	}
 
 	@Override
+	// to return a collection(In case multiple roles) otherwise single role of the
+	// authorities
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 
 		SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority(user.getRole());
@@ -34,8 +35,8 @@ public class CustomUserDetails implements UserDetails {
 
 	@Override
 	public String getUsername() {
-		// TODO Auto-generated method stub
 		return user.getUsername();
+
 	}
 
 	@Override

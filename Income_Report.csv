@@ -1,0 +1,6 @@
+Bill_id,Room_No,Guest_Name,Bill_Date,Total_Bill
+2145561307,102,Manish Kumar,Fri Aug 05 22:06:59 IST 2022,21240.0
+990740188,404,Harry Gujral,Fri Aug 05 22:35:58 IST 2022,25016.0
+
+Total_Income,Salaries_Paid,Profit
+46256.0,70000.0,-23744.0

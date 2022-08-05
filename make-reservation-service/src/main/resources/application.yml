@@ -3,6 +3,8 @@ server:
 spring:
     application:
          name: make-reservation-service
+    banner :
+      location : banner.txt
     data:
      mongodb:
       host: localhost

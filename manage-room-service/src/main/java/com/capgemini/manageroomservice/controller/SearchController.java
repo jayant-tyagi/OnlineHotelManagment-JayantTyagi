@@ -19,10 +19,10 @@ import com.capgemini.manageroomservice.service.SearchService;
 public class SearchController {
 	@Autowired
 	private SearchService searchService;
-	
-	@GetMapping(value="/result", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<RoomModel>> searchRoom(@RequestBody SearchModel searchQuery){
+
+	@GetMapping(value = "/result", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<RoomModel>> searchRoom(@RequestBody SearchModel searchQuery) {
 		return ResponseEntity.ok(searchService.searchRoomService(searchQuery));
-		}
-	
+	}
+
 }

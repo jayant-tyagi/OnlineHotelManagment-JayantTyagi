@@ -32,7 +32,7 @@ public class IncomeReportServiceImpl implements IncomeReportService {
 		double profit=totalIncome-salaries;
 		filecontent.append(totalIncome).append(",").append(salaries).append(",").append(profit).append("\n");
 		
-		String filename="D:\\\\Online Hotel Management System\\\\Incomereport.csv";
+		String filename="/Users/tyagi/Downloads/HotelManagementSystem/Income_Report.csv";
 		
 		try {
 			

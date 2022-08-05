@@ -1,6 +1,8 @@
 spring:
     application:
             name: manage-guest-service
+    banner:
+      location: banner.txt
     datasource:
      driverClassName: com.mysql.cj.jdbc.Driver
      url: jdbc:mysql://localhost:3306/guestdb

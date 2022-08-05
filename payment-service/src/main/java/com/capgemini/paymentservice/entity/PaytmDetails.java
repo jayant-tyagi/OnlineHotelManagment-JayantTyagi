@@ -5,30 +5,29 @@ import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-
 @Component
 @ConfigurationProperties("paytm.payment.sandbox")
 public class PaytmDetails {
-	
-	private String merchantId;
-	
-	private String merchantKey;
-	
-	private String channelId;
-	
-	private String website;
-	
-	private String industryTypeId;
-	
-	private String paytmUrl;
-	
-	private Map<String, String> details;
-	
-	public PaytmDetails() {}
-	
 
-	public PaytmDetails(String merchantId, String merchantKey, String channelId, String website,
-			String industryTypeId, String paytmUrl, Map<String, String> details) {
+	private String merchantId;
+
+	private String merchantKey;
+
+	private String channelId;
+
+	private String website;
+
+	private String industryTypeId;
+
+	private String paytmUrl;
+
+	private Map<String, String> details;
+
+	public PaytmDetails() {
+	}
+
+	public PaytmDetails(String merchantId, String merchantKey, String channelId, String website, String industryTypeId,
+			String paytmUrl, Map<String, String> details) {
 		super();
 		this.merchantId = merchantId;
 		this.merchantKey = merchantKey;
@@ -95,12 +94,11 @@ public class PaytmDetails {
 		this.details = details;
 	}
 
-
 	@Override
 	public String toString() {
 		return "PaytmDetailPojo [merchantId=" + merchantId + ", merchantKey=" + merchantKey + ", channelId=" + channelId
 				+ ", website=" + website + ", industryTypeId=" + industryTypeId + ", paytmUrl=" + paytmUrl
 				+ ", details=" + details + "]";
-	}	
+	}
 
 }

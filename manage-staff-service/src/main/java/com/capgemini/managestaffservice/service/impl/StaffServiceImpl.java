@@ -30,18 +30,18 @@ public class StaffServiceImpl implements StaffService {
 	private AddressMapper addressMapper;
 	@Autowired
 	private StaffRepository staffRepository;
-	
+
 	public StaffModel addStaffService(StaffModel staff) {
 		validateEntity(staff.getAddress());
 		validateEntity(staff);
-		Staff staffEntity= staffRepository.save(staffMapper.mapDtoToEntity(staff));
+		Staff staffEntity = staffRepository.save(staffMapper.mapDtoToEntity(staff));
 		return staffMapper.mapEntityToDto(staffEntity);
 	}
-	
+
 	public StaffModel updateStaffService(StaffModel staff) {
 		validateEntity(staff.getAddress());
 		validateEntity(staff);
-		Staff staffEntity =staffRepository.findById(staff.getCode());
+		Staff staffEntity = staffRepository.findById(staff.getCode());
 		staffEntity.setFirstname(staff.getFirstname());
 		staffEntity.setLastname(staff.getLastname());
 		staffEntity.setSalary(staff.getSalary());
@@ -50,9 +50,10 @@ public class StaffServiceImpl implements StaffService {
 		staffEntity.setOccupation(staff.getOccupation());
 		staffEntity.setEmail(staff.getEmail());
 		staffEntity.setAddress(addressMapper.mapDtoToEntity(staff.getAddress()));
-		staffEntity=staffRepository.save(staffEntity);
+		staffEntity = staffRepository.save(staffEntity);
 		return staffMapper.mapEntityToDto(staffEntity);
 	}
+
 	public String deleteStaffService(int id) {
 		try {
 			staffRepository.deleteById(id);
@@ -62,23 +63,25 @@ public class StaffServiceImpl implements StaffService {
 		}
 		return "can't delete";
 	}
+
 	public StaffModel viewStaffService(int id) {
-		Staff staffEntity =staffRepository.findById(id);
+		Staff staffEntity = staffRepository.findById(id);
 		return staffMapper.mapEntityToDto(staffEntity);
 	}
-	public List<StaffModel> viewAllList(){
-		List<Staff> staffList= staffRepository.findAll();
-		List<StaffModel> modelList= new ArrayList<StaffModel>();
-		for(Staff staff: staffList) {
+
+	public List<StaffModel> viewAllList() {
+		List<Staff> staffList = staffRepository.findAll();
+		List<StaffModel> modelList = new ArrayList<StaffModel>();
+		for (Staff staff : staffList) {
 			modelList.add(staffMapper.mapEntityToDto(staff));
 		}
 		return modelList;
 	}
-	
+
 	public StaffList generateReport() {
 		List<Staff> demoList = staffRepository.findAll();
 		List<StaffReportModel> reportModelList = new ArrayList<StaffReportModel>();
-		for(Staff staffins : demoList) {
+		for (Staff staffins : demoList) {
 			StaffReportModel reportModel = new StaffReportModel();
 			reportModel.setCode(staffins.getCode());
 			reportModel.setFirstname(staffins.getFirstname());
@@ -91,7 +94,7 @@ public class StaffServiceImpl implements StaffService {
 		modelList.setStaffReportList(reportModelList);
 		return modelList;
 	}
-	
+
 	private void validateEntity(StaffModel staff) {
 		List<String> errorMessage = new ArrayList<>();
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
@@ -107,6 +110,7 @@ public class StaffServiceImpl implements StaffService {
 		}
 
 	}
+
 	private void validateEntity(AddressModel address) {
 		List<String> errorMessage = new ArrayList<>();
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
@@ -122,6 +126,5 @@ public class StaffServiceImpl implements StaffService {
 		}
 
 	}
-
 
 }

@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: payment-service
+  banner:
+    location: banner.txt
 paytm.payment:
   sandbox:
     merchantId: foEaUP15584985546689

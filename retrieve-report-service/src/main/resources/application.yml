@@ -3,6 +3,8 @@ server:
 spring:
      application:
             name: retrieve-report-service
+     banner:
+        location: banner.txt
      data:
              mongodb:
                     host: localhost

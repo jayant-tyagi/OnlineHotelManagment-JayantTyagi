@@ -14,6 +14,4 @@ public class StaffList {
 		this.staffReportList = staffReportList;
 	}
 
-
-
 }

@@ -36,7 +36,7 @@ public class BillServiceImpl implements BillService {
 
 	@SuppressWarnings("deprecation")
 	public BillModel issueBill(int roomno) {
-		List<Reservation> reservationlist = reservationRepository.findAllByRoomnoAndStatus(roomno, "staying");
+		List<Reservation> reservationlist = reservationRepository.findAllByRoomnoAndStatus(roomno, "Staying");
 		Date presentDate = new Date();
 		Reservation reservationdata = new Reservation();
 		for (Reservation bookingSearch : reservationlist) {
@@ -45,8 +45,12 @@ public class BillServiceImpl implements BillService {
 				break;
 			}
 		}
+
 		Random rd = new Random();
 		BillModel billModel = new BillModel();
+		if (reservationdata.getGuestEmail() == null) {
+			return billModel;
+		}
 		billModel.setBillid(rd.nextInt(Integer.MAX_VALUE));
 
 		GuestModel guest = resttemplate.getForEntity("http://localhost:8088/ManageGuest/viewguest/{email}",

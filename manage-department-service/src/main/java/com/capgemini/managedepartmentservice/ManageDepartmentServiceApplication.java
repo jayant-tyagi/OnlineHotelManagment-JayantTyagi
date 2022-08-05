@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-
 @SpringBootApplication
 @EnableEurekaClient
 @Configuration
@@ -17,7 +16,7 @@ public class ManageDepartmentServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ManageDepartmentServiceApplication.class, args);
-		
+
 	}
 
 }

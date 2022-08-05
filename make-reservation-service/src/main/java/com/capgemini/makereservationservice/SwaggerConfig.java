@@ -17,26 +17,20 @@ import springfox.documentation.spring.web.plugins.Docket;
 @EnableWebMvc
 public class SwaggerConfig implements WebMvcConfigurer {
 
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("com.capgemini.makereservationservice.controller"))
-                .paths(PathSelectors.regex("/.*"))
-                .build()
-                .apiInfo(apidetails());
-    }
-    
-    private ApiInfo apidetails() {
-    	return new ApiInfo(
-    			"Make Reservation",
-    			"It manages all the reservations which are done in the Hotel.",
-    			"1.0",
-    			"Free to use",
-    			new springfox.documentation.service.Contact("Jayant Tyagi","http://localhost:8086","tyagijayant03@gmail.com"),
-    			"API Licence",
-    			"http://localhost:8086",
-    			Collections.emptyList());
-    }
+	@Bean
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select()
+				.apis(RequestHandlerSelectors.basePackage("com.capgemini.makereservationservice.controller"))
+				.paths(PathSelectors.regex("/.*")).build().apiInfo(apidetails());
+	}
+
+	private ApiInfo apidetails() {
+		return new ApiInfo("Make Reservation", "It manages all the reservations which are done in the Hotel.", "1.0",
+				"Free to use",
+				new springfox.documentation.service.Contact("Jayant Tyagi",
+						"http://localhost:8086/MakeReservation/HelloTest", "tyagijayant03@gmail.com"),
+				"API Licence", "http://localhost:8086", Collections.emptyList());
+	}
 
 }
 
