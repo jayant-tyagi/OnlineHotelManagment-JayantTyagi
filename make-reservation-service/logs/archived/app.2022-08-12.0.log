@@ -1,0 +1,3 @@
+2022-08-12 09:49:53,843 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] Starting MakeReservationServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 95788 (/Users/tyagi/Downloads/HotelManagementSystem/make-reservation-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/make-reservation-service)
+2022-08-12 09:49:53,849 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-12 09:49:57,969 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] Started MakeReservationServiceApplication in 4.606 seconds (JVM running for 5.216)

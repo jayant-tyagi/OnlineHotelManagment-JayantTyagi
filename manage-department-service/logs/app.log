@@ -1,9 +1,7 @@
-2022-08-06 00:13:24,817 INFO com.capgemini.managedepartmentservice.ManageDepartmentServiceApplication [main] Starting ManageDepartmentServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 36727 (/Users/tyagi/Downloads/HotelManagementSystem/manage-department-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-department-service)
-2022-08-06 00:13:24,823 INFO com.capgemini.managedepartmentservice.ManageDepartmentServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-06 00:13:30,738 INFO com.capgemini.managedepartmentservice.ManageDepartmentServiceApplication [main] Started ManageDepartmentServiceApplication in 6.398 seconds (JVM running for 7.43)
-2022-08-06 00:15:32,545 INFO com.capgemini.managedepartmentservice.controller.DepartmentController [http-nio-8081-exec-2] Delete Department has been accessed
-2022-08-06 00:15:37,071 INFO com.capgemini.managedepartmentservice.controller.DepartmentController [http-nio-8081-exec-3] Add Department has been accessed
-2022-08-06 00:16:16,471 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(6)-127.0.0.1] DiscoveryClient_MANAGE-DEPARTMENT-SERVICE/192.168.1.10:manage-department-service:8081 - de-registration failedCannot execute request on any known server
+2022-08-19 13:12:51,155 INFO com.capgemini.managedepartmentservice.ManageDepartmentServiceApplication [main] Starting ManageDepartmentServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 40205 (/Users/tyagi/Downloads/HotelManagementSystem/manage-department-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-department-service)
+2022-08-19 13:12:51,162 INFO com.capgemini.managedepartmentservice.ManageDepartmentServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-19 13:12:57,079 INFO com.capgemini.managedepartmentservice.ManageDepartmentServiceApplication [main] Started ManageDepartmentServiceApplication in 6.363 seconds (JVM running for 7.076)
+2022-08-19 13:29:20,246 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(18)-127.0.0.1] DiscoveryClient_MANAGE-DEPARTMENT-SERVICE/192.168.1.10:manage-department-service:8081 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)

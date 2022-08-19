@@ -9,8 +9,10 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,11 +26,11 @@ import com.capgemini.managestaffservice.model.StaffModel;
 import com.capgemini.managestaffservice.service.StaffService;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/ManageStaff")
 public class StaffController {
 
 	Logger logger = LoggerFactory.getLogger(StaffController.class);
-
 	@Autowired
 	private RabbitTemplate template;
 
@@ -43,7 +45,6 @@ public class StaffController {
 
 	@PostMapping(value = "/addstaff", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<StaffModel> addStaff(@RequestBody StaffModel staff) {
-		logger.info("Add Staff has been accessed");
 		StaffModel model = staffService.addStaffService(staff);
 
 		CustomMessage message = new CustomMessage();
@@ -56,13 +57,12 @@ public class StaffController {
 		message.setMessageDate(new Date());
 		template.convertAndSend(MqConfig.EXCHANGE, MqConfig.ROUTING_KEY, message);
 
+		logger.info("Add staff has been accessed");
 		return ResponseEntity.ok(model);
 	}
 
 	@PutMapping(value = "/updatestaff", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<StaffModel> updateStaff(@RequestBody StaffModel staff) {
-		logger.info("Update Staff has been accessed");
-
 		StaffModel model = staffService.updateStaffService(staff);
 
 		CustomMessage message = new CustomMessage();
@@ -75,41 +75,44 @@ public class StaffController {
 		message.setMessageDate(new Date());
 		template.convertAndSend(MqConfig.EXCHANGE, MqConfig.ROUTING_KEY, message);
 
+		logger.info("Update staff has been accessed");
 		return ResponseEntity.ok(model);
 	}
 
-	@DeleteMapping(value = "/deletestaff", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> deleteStaff(@RequestBody StaffModel staff) {
-		logger.info("Delete Staff has been accessed");
+	@DeleteMapping(value = "/deletestaff/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> deleteStaff(@PathVariable int code) {
 		CustomMessage message = new CustomMessage();
 
 		StringBuilder str = new StringBuilder();
-		str.append("Staff with staff id as ").append(staff.getCode())
+		str.append("Staff with staff id as ").append(code)
 				.append(" has left the job and the details in the DB are deleted ");
 
 		message.setMessage(str.toString());
 		message.setMessageDate(new Date());
 		template.convertAndSend(MqConfig.EXCHANGE, MqConfig.ROUTING_KEY, message);
 
-		return ResponseEntity.ok(staffService.deleteStaffService(staff.getCode()));
+		logger.info("delete staff has been accessed");
+		return ResponseEntity.ok(staffService.deleteStaffService(code));
 	}
 
-	@GetMapping(value = "/viewstaff", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<StaffModel> viewStaffbyId(@RequestBody StaffModel staff) {
-		logger.info("View Staff by id has been accessed");
-		return ResponseEntity.ok(staffService.viewStaffService(staff.getCode()));
+	@GetMapping(value = "/viewstaff/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<StaffModel> viewStaffbyId(@PathVariable int code) {
+		logger.info("view staff by code has been accessed");
+		return ResponseEntity.ok(staffService.viewStaffService(code));
 	}
 
 	@GetMapping(value = "/viewstaff", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<StaffModel>> viewAll() {
-		logger.info("View Staff has been accessed");
+		logger.info("View all staff has been accessed");
 		return ResponseEntity.ok(staffService.viewAllList());
 	}
 
 	@GetMapping(value = "/reportdata", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<StaffList> staffreport() {
-		logger.info("Report Data has been accessed");
+		logger.info("report staff data has been accessed");
 		return ResponseEntity.ok(staffService.generateReport());
 	}
 
 }
+
+

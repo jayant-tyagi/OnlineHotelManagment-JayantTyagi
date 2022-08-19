@@ -1,0 +1,4 @@
+2022-08-11 23:57:42,154 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 36089 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-11 23:57:42,158 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-11 23:57:46,209 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.53 seconds (JVM running for 5.246)
+2022-08-11 23:57:50,203 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-1] Generate Staff Report has been accessed

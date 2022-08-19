@@ -1,30 +1,60 @@
-2022-08-05 00:10:04,682 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 16559 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 00:10:04,689 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 00:10:10,284 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 6.028 seconds (JVM running for 6.84)
-2022-08-05 00:14:04,161 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 17393 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 00:14:04,167 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 00:14:10,067 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 6.359 seconds (JVM running for 7.065)
-2022-08-05 00:15:07,785 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 17594 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 00:15:07,788 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 00:15:13,509 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 6.18 seconds (JVM running for 7.077)
-2022-08-05 00:16:11,408 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-1] Add user has been accessed
-2022-08-05 00:16:38,287 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-3] Add user has been accessed
-2022-08-05 00:23:57,859 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 19382 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 00:23:57,862 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 00:24:04,064 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 6.715 seconds (JVM running for 7.646)
-2022-08-05 00:24:06,141 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-4] Add user has been accessed
-2022-08-05 00:26:32,553 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-5] Add user has been accessed
-2022-08-05 00:29:17,942 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-6] Add user has been accessed
-2022-08-05 00:29:56,056 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-7] Add user has been accessed
-2022-08-05 00:39:14,842 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 22518 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 00:39:14,847 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 00:39:20,357 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 5.954 seconds (JVM running for 6.577)
-2022-08-05 00:46:26,543 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-2] User HelloTest has been accessed
-2022-08-05 00:47:23,889 INFO com.capgemini.manageuserservice.controller.UserController [http-nio-8089-exec-7] User HelloTest has been accessed
-2022-08-05 00:52:10,788 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 25052 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 00:52:10,793 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 00:52:16,388 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 6.052 seconds (JVM running for 6.753)
-2022-08-05 01:04:15,553 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(14)-127.0.0.1] DiscoveryClient_MANAGE-USER-SERVICE/192.168.1.10:manage-user-service:8089 - de-registration failedCannot execute request on any known server
+2022-08-05 01:04:18,188 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-08-05 01:04:48,256 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-08-05 01:05:18,331 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-08-05 01:05:48,382 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-08-05 01:05:54,918 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(110)-127.0.0.1] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
@@ -96,10 +126,10 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
-2022-08-05 14:17:57,674 INFO com.capgemini.manageuserservice.ManageUserServiceApplicationTests [main] Starting ManageUserServiceApplicationTests using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 49069 (started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 14:17:57,681 INFO com.capgemini.manageuserservice.ManageUserServiceApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 14:18:08,921 INFO com.capgemini.manageuserservice.ManageUserServiceApplicationTests [main] Started ManageUserServiceApplicationTests in 11.856 seconds (JVM running for 13.304)
-2022-08-05 14:18:13,361 ERROR com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_MANAGE-USER-SERVICE/192.168.1.10:manage-user-service:8089 - de-registration failedCannot execute request on any known server
+2022-08-05 14:19:09,360 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplicationTests [main] Starting RetrieveReportServiceApplicationTests using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 49316 (started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 14:19:09,365 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 14:19:16,600 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplicationTests [main] Started RetrieveReportServiceApplicationTests in 7.794 seconds (JVM running for 9.285)
+2022-08-05 14:19:17,025 ERROR com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
@@ -132,10 +162,10 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.lang.Iterable.forEach(Iterable.java:75)
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
 	at java.lang.Thread.run(Thread.java:750)
-2022-08-05 14:26:47,864 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 50992 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 14:26:47,869 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 14:26:53,525 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 6.087 seconds (JVM running for 6.736)
-2022-08-05 18:18:04,226 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_MANAGE-USER-SERVICE/192.168.1.10:manage-user-service:8089 - was unable to send heartbeat!
+2022-08-05 14:26:59,568 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 51036 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 14:26:59,571 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 14:27:03,574 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.466 seconds (JVM running for 5.163)
+2022-08-05 18:18:13,933 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - was unable to send heartbeat!
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
@@ -149,7 +179,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
-2022-08-05 18:18:08,091 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(233)-127.0.0.1] DiscoveryClient_MANAGE-USER-SERVICE/192.168.1.10:manage-user-service:8089 - de-registration failedCannot execute request on any known server
+2022-08-05 18:18:34,181 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(235)-127.0.0.1] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
@@ -221,10 +251,32 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
-2022-08-05 21:06:15,232 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 98759 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
-2022-08-05 21:06:15,235 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-05 21:06:20,982 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 6.186 seconds (JVM running for 6.847)
-2022-08-05 23:32:27,792 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_MANAGE-USER-SERVICE/192.168.1.10:manage-user-service:8089 - was unable to send heartbeat!
+2022-08-05 21:06:25,766 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 98794 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 21:06:25,770 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 21:06:30,040 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.734 seconds (JVM running for 5.476)
+2022-08-05 22:44:50,178 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 18644 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 22:44:50,180 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 22:44:54,380 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.738 seconds (JVM running for 5.661)
+2022-08-05 22:48:04,879 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-1] Generate Staff Report has been accessed
+2022-08-05 22:51:05,812 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 19862 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 22:51:05,814 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 22:51:10,116 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.83 seconds (JVM running for 5.713)
+2022-08-05 22:51:18,053 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-1] Generate Income Report has been accessed
+2022-08-05 22:53:24,039 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 20366 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 22:53:24,042 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 22:53:27,892 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.277 seconds (JVM running for 4.894)
+2022-08-05 22:53:33,294 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-1] Generate Income Report has been accessed
+2022-08-05 22:55:05,990 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 20705 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 22:55:05,992 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 22:55:09,962 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.399 seconds (JVM running for 5.19)
+2022-08-05 22:55:14,256 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-1] Generate Income Report has been accessed
+2022-08-05 22:55:22,099 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-2] Generate Staff Report has been accessed
+2022-08-05 22:58:02,947 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Starting RetrieveReportServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 21306 (/Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/retrieve-report-service)
+2022-08-05 22:58:02,949 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-05 22:58:07,346 INFO com.capgemini.retrievereportservice.RetrieveReportServiceApplication [main] Started RetrieveReportServiceApplication in 4.937 seconds (JVM running for 6.124)
+2022-08-05 22:58:07,359 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-1] Generate Staff Report has been accessed
+2022-08-05 22:58:20,589 INFO com.capgemini.retrievereportservice.controller.ReportController [http-nio-8084-exec-2] Generate Income Report has been accessed
+2022-08-05 23:32:08,722 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - was unable to send heartbeat!
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
@@ -238,7 +290,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
-2022-08-05 23:32:33,039 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(107)-127.0.0.1] DiscoveryClient_MANAGE-USER-SERVICE/192.168.1.10:manage-user-service:8089 - de-registration failedCannot execute request on any known server
+2022-08-05 23:32:10,800 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(36)-127.0.0.1] DiscoveryClient_RETRIEVE-REPORT-SERVICE/192.168.1.10:retrieve-report-service:8084 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)

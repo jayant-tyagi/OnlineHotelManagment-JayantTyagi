@@ -1,0 +1,6 @@
+2022-08-12 09:50:09,607 INFO com.capgemini.manageinventoryservice.ManageInventoryServiceApplication [main] Starting ManageInventoryServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 95840 (/Users/tyagi/Downloads/HotelManagementSystem/manage-inventory-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-inventory-service)
+2022-08-12 09:50:09,613 INFO com.capgemini.manageinventoryservice.ManageInventoryServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-12 09:50:14,885 INFO com.capgemini.manageinventoryservice.ManageInventoryServiceApplication [main] Started ManageInventoryServiceApplication in 5.709 seconds (JVM running for 6.351)
+2022-08-12 10:19:58,867 INFO com.capgemini.manageinventoryservice.controller.InventoryController [http-nio-8082-exec-1] Add Inventory has been accessed
+2022-08-12 10:21:53,262 INFO com.capgemini.manageinventoryservice.controller.InventoryController [http-nio-8082-exec-5] Update Inventory has been accessed
+2022-08-12 10:22:02,853 INFO com.capgemini.manageinventoryservice.controller.InventoryController [http-nio-8082-exec-6] Delete Inventory has been accessed

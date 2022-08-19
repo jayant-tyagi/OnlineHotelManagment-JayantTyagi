@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import com.capgemini.makereservationservice.service.BillService;
 import com.capgemini.makereservationservice.service.EmailService;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/IssueBill")
 public class BillController {
 	Logger logger = LoggerFactory.getLogger(ReservationController.class);
@@ -29,7 +31,7 @@ public class BillController {
 	@GetMapping(value = "/{roomno}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> issueBill(@PathVariable int roomno) {
 		BillModel billmodel = billService.issueBill(roomno);
-		if (billmodel.getBillid() == 0) {
+		if(billmodel.getBillid() == 0) {
 			return new ResponseEntity<>("NO BOOKING FOUND TO ISSUE BILL FOR NOW", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		StringBuilder maildata = new StringBuilder(
@@ -58,3 +60,5 @@ public class BillController {
 	}
 
 }
+
+

@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import com.capgemini.managedepartmentservice.service.impl.MessageListener;
 
 @RestController
 @RequestMapping("/ManageDepartment")
+@CrossOrigin
 public class DepartmentController {
 
 	Logger logger = LoggerFactory.getLogger(DepartmentController.class);
@@ -53,10 +55,10 @@ public class DepartmentController {
 		return ResponseEntity.ok(departmentService.deleteDepartmentService(id));
 	}
 
-	@GetMapping(value = "/viewdepartment", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<DepartmentModel> findDepartmentByName(@RequestBody DepartmentModel department) {
-		logger.info("View Department has been accessed");
-		return ResponseEntity.ok(departmentService.viewDepartmentByName(department.getName()));
+	@GetMapping(value = "/viewdepartment/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<DepartmentModel> findDepartmentByName(@PathVariable String name) {
+		logger.info("view department by name has been accessed");
+		return ResponseEntity.ok(departmentService.viewDepartmentByName(name));
 
 	}
 

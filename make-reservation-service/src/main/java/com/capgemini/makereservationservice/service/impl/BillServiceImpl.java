@@ -48,7 +48,7 @@ public class BillServiceImpl implements BillService {
 
 		Random rd = new Random();
 		BillModel billModel = new BillModel();
-		if (reservationdata.getGuestEmail() == null) {
+		if(reservationdata.getGuestEmail() == null) {
 			return billModel;
 		}
 		billModel.setBillid(rd.nextInt(Integer.MAX_VALUE));
@@ -111,3 +111,5 @@ public class BillServiceImpl implements BillService {
 		return incomeList;
 	}
 }
+
+

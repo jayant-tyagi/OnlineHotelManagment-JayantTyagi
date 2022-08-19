@@ -1,21 +1,4 @@
-2022-08-03 13:16:11,246 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] Starting MakeReservationServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 85144 (/Users/tyagi/Downloads/HotelManagementSystem/make-reservation-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/make-reservation-service)
-2022-08-03 13:16:11,251 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-08-03 13:16:15,478 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] Started MakeReservationServiceApplication in 4.743 seconds (JVM running for 6.598)
-2022-08-03 13:16:45,143 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_MAKE-RESERVATION-SERVICE/192.168.1.10:make-reservation-service:8086 - was unable to send heartbeat!
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
-	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-2022-08-03 13:16:57,932 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(4)-127.0.0.1] DiscoveryClient_MAKE-RESERVATION-SERVICE/192.168.1.10:make-reservation-service:8086 - de-registration failedCannot execute request on any known server
+2022-08-12 04:22:19,207 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(407)-127.0.0.1] DiscoveryClient_MANAGE-USER-SERVICE/192.168.1.6:manage-user-service:8089 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
@@ -87,5 +70,6 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
-2022-08-03 13:17:30,130 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] Starting MakeReservationServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 85182 (/Users/tyagi/Downloads/HotelManagementSystem/make-reservation-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/make-reservation-service)
-2022-08-03 13:17:30,133 INFO com.capgemini.makereservationservice.MakeReservationServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-12 09:50:22,945 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Starting ManageUserServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 95879 (/Users/tyagi/Downloads/HotelManagementSystem/manage-user-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-user-service)
+2022-08-12 09:50:22,948 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-12 09:50:28,301 INFO com.capgemini.manageuserservice.ManageUserServiceApplication [main] Started ManageUserServiceApplication in 5.81 seconds (JVM running for 6.629)

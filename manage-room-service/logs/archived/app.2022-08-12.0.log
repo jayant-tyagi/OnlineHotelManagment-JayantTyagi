@@ -1,0 +1,3 @@
+2022-08-12 09:52:13,305 INFO com.capgemini.manageroomservice.ManageRoomServiceApplication [main] Starting ManageRoomServiceApplication using Java 1.8.0_341 on TYAGIs-MacBook-Air.local with PID 96485 (/Users/tyagi/Downloads/HotelManagementSystem/manage-room-service/target/classes started by tyagi in /Users/tyagi/Downloads/HotelManagementSystem/manage-room-service)
+2022-08-12 09:52:13,311 INFO com.capgemini.manageroomservice.ManageRoomServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-08-12 09:52:18,744 INFO com.capgemini.manageroomservice.ManageRoomServiceApplication [main] Started ManageRoomServiceApplication in 5.908 seconds (JVM running for 6.759)
